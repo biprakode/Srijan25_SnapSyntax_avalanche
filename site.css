@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: whitesmoke;
+}
+
+body {
+    background-color: transparent;
+}
+
+li , a , button{
+    font-family: 'Parisienne' , sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    color: #242424;
+    text-decoration: none;
+    padding: 0 2.5rem 0 0;
+}
+
+.nav_links li.Menu a{
+    background-color: rgb(10, 10, 10);
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+
+.NavBar * {
+    background-color: transparent;
+}
+
+.NavBar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin: 2.5%;
+    padding: 2.5%;
+    border-radius: 20px;
+    background-color: white;
+    padding: 30px 2.5%;
+}
+
+.logo {
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover{
+    color: #ff3300;
+}
+
+button {
+    padding: 9px 25px;
+    background-color: rgba(0 , 136 , 169 , 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    background-color: rgba(169, 0, 0, 0.8);
+}
+
+.gradientBG {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.homePageContent * {
+    background-color: transparent;
+}
+
+.homePageContent {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10% 0;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    background-color: transparent;
+    z-index: 0;
+}
+
+.homePageText , .downloadCV , .socialMedia *{
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    z-index: 0;
+    background-color: transparent;
+    color: #242424;
+}
+
+.homePageText {
+    width: 50%;
+    flex-direction: column;
+    justify-content:baseline;
+    text-align: left;
+    margin: 0%;
+    padding: 2%;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.homePageText h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    padding: 5% 2.5%;
+}
+
+.homePageText h1 span {
+    color: rgba(0 , 136 , 169 , 1);
+}
+
+.homePageText h1 span:hover {
+    color: rgba(0 , 136 , 169 , 0.8);
+}   
+
+.homePageText h2 {
+    font-size: 5rem;
+    font-weight: 500;
+    
+    margin: 0 0; 
+    padding: 3%;
+    color: #242424;
+}
+
+.homePageText h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0 0; 
+    padding: 5%;
+    width: 75%;
+    color: #242424;
+}
+
+
+.downloadCV {
+    
+}
+
