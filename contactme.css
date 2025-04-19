@@ -1,0 +1,244 @@
+/* Contact Page Styles */
+.contactPage {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: transparent;
+}
+
+.contactPage * {
+    background-color: transparent;
+}
+
+.contactContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.contactContainer * {
+    background-color: transparent;
+}
+
+/* Contact Info Section */
+.contactInfo {
+    flex: 1;
+    padding: 50px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contactInfo h1 {
+    font-size: 2.8rem;
+    color: #242424;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.contactInfo > p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.personalDetails {
+    margin-bottom: 40px;
+}
+
+.detailItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(0, 136, 169, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.icon img {
+    width: 25px;
+    height: 25px;
+}
+
+.text h3 {
+    font-size: 1.2rem;
+    color: rgba(0, 136, 169, 1);
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.text p {
+    font-size: 1rem;
+    color: #444;
+}
+
+/* Social Media Section */
+.socialMediaContact h3 {
+    font-size: 1.3rem;
+    color: #242424;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.socialIcons {
+    display: flex;
+    gap: 15px;
+}
+
+.socialIcons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    transition: transform 0.3s ease;
+    line-height: 40px; /* Add this line - should match the height */
+    text-align: center; /* Ensure horizontal centering */
+}
+
+.socialIcons a:hover {
+    transform: translateY(-5px);
+}
+
+.socialIcons img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Contact Form Section */
+.contactForm {
+    flex: 1;
+    padding: 50px;
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contactForm h2 {
+    font-size: 2rem;
+    color: #242424;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.formGroup {
+    margin-bottom: 25px;
+}
+
+.formGroup label {
+    display: block;
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.formGroup input,
+.formGroup textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    transition: border-color 0.3s ease;
+    background-color: white;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+    border-color: rgba(0, 136, 169, 1);
+    outline: none;
+}
+
+.submitBtn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: rgba(0, 136, 169, 1);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.submitBtn:hover {
+    background-color: rgba(0, 115, 143, 1);
+    transform: translateY(-3px);
+}
+
+/* Active button in navbar */
+.cta button.active {
+    background-color: rgba(0, 136, 169, 0.8);
+    font-weight: 700;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .contactContainer {
+        flex-direction: column;
+        width: 90%;
+    }
+    
+    .contactInfo, 
+    .contactForm {
+        padding: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contactInfo h1 {
+        font-size: 2.2rem;
+    }
+    
+    .contactForm h2 {
+        font-size: 1.8rem;
+    }
+    
+    .contactInfo, 
+    .contactForm {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .contactContainer {
+        width: 95%;
+    }
+    
+    .contactInfo, 
+    .contactForm {
+        padding: 25px;
+    }
+    
+    .icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .icon img {
+        width: 20px;
+        height: 20px;
+    }
+}
