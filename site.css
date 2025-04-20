@@ -2,11 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 
-* {
+body{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    background-color: whitesmoke;
 }
 
 body {
@@ -28,8 +27,9 @@ li , a , button{
     border-radius: 10px;
 }
 
-.NavBar * {
-    background-color: transparent;
+.NavBar {
+    position: relative;
+    z-index: 10;
 }
 
 .NavBar {
@@ -39,7 +39,7 @@ li , a , button{
     margin: 2.5%;
     padding: 2.5%;
     border-radius: 20px;
-    background-color: white;
+    background-color: transparent;
     padding: 30px 2.5%;
 }
 
@@ -66,11 +66,16 @@ nav {
 }
 
 .nav_links li a {
+    background-color: rgba(0, 136, 169, 1); /* Same blue as your Contact Me button */
+    padding: 9px 25px;
+    border-radius: 50px;
+    color: white; /* Makes the text white for better contrast */
     transition: all 0.3s ease 0s;
 }
 
-.nav_links li a:hover{
-    color: #ff3300;
+.nav_links li a:hover {
+    background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent black overlay */
+    color: white;
 }
 
 button {
@@ -87,17 +92,19 @@ button:hover {
 }
 
 .gradientBG {
-    content: '';
-    position: absolute;
+    position: fixed;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
 }
 
-.homePageContent * {
-    background-color: transparent;
+.homePageContent {
+    position: relative;
+    z-index: 5;
+    padding: 10% 5%;
 }
 
 .homePageContent {
@@ -169,3 +176,4 @@ button:hover {
 .downloadCV {
     
 }
+

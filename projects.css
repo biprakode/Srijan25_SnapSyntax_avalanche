@@ -6,7 +6,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    background-color: whitesmoke;
+    background-color: transparent; /* Change from whitesmoke to transparent */
 }
 
 body {
@@ -37,10 +37,11 @@ li , a , button{
     justify-content: space-between; 
     align-items: center;
     margin: 2.5%;
-    padding: 2.5%;
+    padding: 30px 2.5%; /* Remove duplicate padding */
     border-radius: 20px;
-    background-color: white;
-    padding: 30px 2.5%;
+    background-color: transparent; /* Change from white to transparent */
+    position: relative; /* Add position for stacking context */
+    z-index: 10; /* Ensure navbar appears above other elements */
 }
 
 .logo {
@@ -58,6 +59,8 @@ nav {
 
 .nav_links {
     list-style: none;
+    display: flex; /* Add flex display to ensure horizontal alignment */
+    align-items: center;
 }
 
 .nav_links li {
@@ -66,11 +69,17 @@ nav {
 }
 
 .nav_links li a {
+    background-color: rgba(0, 136, 169, 1); /* Blue background */
+    padding: 9px 25px;
+    border-radius: 50px;
+    color: white; /* White text for contrast */
     transition: all 0.3s ease 0s;
+    display: inline-block; /* Ensure proper display */
 }
 
-.nav_links li a:hover{
-    color: #ff3300;
+.nav_links li a:hover {
+    background-color: rgba(0, 109, 135, 1); /* Darker blue on hover */
+    color: white; /* Keep text white on hover */
 }
 
 button {

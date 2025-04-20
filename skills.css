@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    background-color: whitesmoke;
+    background-color: transparent; /* Change from whitesmoke to transparent */
 }
 
 body {
@@ -28,19 +27,20 @@ li , a , button{
     border-radius: 10px;
 }
 
-.NavBar * {
-    background-color: transparent;
-}
-
 .NavBar {
     display: flex;
     justify-content: space-between; 
     align-items: center;
     margin: 2.5%;
-    padding: 2.5%;
+    padding: 30px 2.5%; /* Remove duplicate padding */
     border-radius: 20px;
-    background-color: white;
-    padding: 30px 2.5%;
+    background-color: transparent; /* Change from white to transparent */
+    position: relative; /* Add position for stacking context */
+    z-index: 10; /* Ensure navbar appears above other elements */
+}
+
+.NavBar * {
+    background-color: transparent;
 }
 
 .logo {
@@ -58,6 +58,8 @@ nav {
 
 .nav_links {
     list-style: none;
+    display: flex; /* Add flex display to ensure horizontal alignment */
+    align-items: center; /* Center items vertically */
 }
 
 .nav_links li {
@@ -66,25 +68,33 @@ nav {
 }
 
 .nav_links li a {
+    background-color: rgba(0, 136, 169, 1); /* Blue background */
+    padding: 9px 25px;
+    border-radius: 50px;
+    color: white; /* White text for contrast */
     transition: all 0.3s ease 0s;
+    display: inline-block; /* Ensure proper display */
 }
 
-.nav_links li a:hover{
-    color: #ff3300;
+.nav_links li a:hover {
+    background-color: rgba(0, 109, 135, 1); /* Darker blue on hover */
+    color: white; /* Keep text white on hover instead of orange */
 }
 
 button {
     padding: 9px 25px;
-    background-color: rgba(0 , 136 , 169 , 1);
+    background-color: rgba(0, 136, 169, 1);
     border: none;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
+    color: white; /* Add white text color */
 }
 
 button:hover {
-    background-color: rgba(169, 0, 0, 0.8);
+    background-color: rgba(0, 109, 135, 1); /* Change to darker blue instead of red */
 }
+
 
 .gradientBG {
     content: '';
@@ -228,4 +238,12 @@ button:hover {
     .pageTitle p {
         font-size: 1.2rem;
     }
+}
+li, a, button {
+    font-family: 'Parisienne', sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    color: #242424;
+    text-decoration: none;
+    padding: 0; /* Remove padding here to prevent spacing issues */
 }
